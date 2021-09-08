@@ -25,7 +25,12 @@ function getNews(event) {
                 editionOutput.innerHTML = input.value + ' Edition'
                 imgOutput.setAttribute('src', article.urlToImage)
                 headingOutput.innerHTML = article.title
-                articleOutput.innerHTML = article.content
+                articleOutput.innerHTML = article.content + ' '
+                let link = document.createElement('a')
+                link.setAttribute('href', article.url)
+                link.setAttribute('target', 'blank')
+                link.innerHTML = 'Read the whole article'
+                articleOutput.appendChild(link)
             })
     }
 }
