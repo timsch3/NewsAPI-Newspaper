@@ -22,9 +22,8 @@ body {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 0.5fr 0.5fr;
     padding: 0 50px;
-    margin-bottom: 250px;
 }
-/* ==================== Top section & biggest heading */
+/* ==================== Top section */
 h1 {
     grid-column: 1/6;
     grid-row: 1/2;
@@ -32,10 +31,15 @@ h1 {
     font-size: 2.5em;
     padding: 10px;
 }
-h1 span:not(:nth-of-type(2)) {
+h1 span {
     font-size: 1.5em;
 }
-h1 span:nth-of-type(2), h2 {
+#input {
+    background-color: #E9E9E0;
+    text-transform: uppercase;
+    font-family: CG;
+    font-size: 2.5rem;
+    padding: 3px;
     font-variant-numeric: lining-nums;
 }
 h2 {
@@ -48,74 +52,26 @@ h2 {
     border-top: 4px double black;
     border-bottom: 4px double black;
 }
+#edition {
+    text-transform: uppercase;
+}
 h3 {
-    grid-column: 1/5;
+    grid-column: 1/6;
     grid-row: 3/4;
-    font-size: 2.3em;
+    font-size: 2.5rem;
     text-align: center;
     font-family: CG-Bold;
 }
-/* ==================== Articles left */
-article > h4 {
-    font-family: CG-Bold;
-    font-size: 1.5em;
+/* ==================== Article */
+article {
+    grid-column: 1/5;
+    grid-row: 4/5;
+    font-family: CG;
+    font-size: 1.5rem;
 }
-article:nth-of-type(odd) {
-    grid-column: 1/2;
-}
-article:nth-of-type(even) {
-    grid-column: 2/3;
-}
-/* ==================== Center image */
-figure {
-    grid-column: 3/4;
-    grid-row: 4/7;
-}
-figure img {
-    max-width: 200%;
-}
-/* ==================== Ads section right */
-aside {
+/* ==================== Image */
+img {
     grid-column: 5/6;
-    grid-row: 3/7;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-aside > h4 {
-    font-size: 1.5em;
-}
-aside > h4, aside p {
-    font-family: CG-Bold;
-}
-aside p {
-    font-size: 3em;
-}
-aside div, aside p {
-    text-align: center;
-}
-aside div h4 {
-    font-size: 1.75em;
-    font-family: CG-Bold;
-}
-aside div p {
-    font-size: 1em;
-}
-aside div a {
-    font-size: 1.25em;
-    color: #666;
-}
-aside img {
-    max-width: 90%;
-    filter: grayscale(100%);
-}
-aside > p, aside div, aside img {
-    border: 4px double black;
-    padding: 10px;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    grid-row: 4/5;
+    max-width: 100%;
 }
